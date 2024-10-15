@@ -49,7 +49,10 @@ export default function Header() {
         </Button>
 
         <Link to="/sign-in">
-          <Button className="px-3 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white">
+          <Button
+            className="px-3 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white
+          "
+          >
             Sign In
           </Button>
         </Link>
