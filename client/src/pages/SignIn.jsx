@@ -3,30 +3,27 @@ import { Link } from "react-router-dom";
 
 export default function SignIn() {
   return (
-    <div className="min-h-screen mt-20">
+    <div className="min-h-full mt-20">
       <div className="flex p-3 max-w-xl mx-auto flex-col">
         <form className="flex flex-col gap-5">
           <div>
-            <Label value="Your Name" />
-            <TextInput type="text" placeholder="Username" id="username" />
-          </div>
-          <div>
             <Label value="Your Email" />
-            <TextInput type="text" placeholder="Email" id="email" />
+            <TextInput type="email" placeholder="Email" id="email" />
           </div>
           <div>
             <Label value="Your Password" />
-            <TextInput type="text" placeholder="Password" id="username" />
+            <TextInput type="password" placeholder="Password" id="username" />
           </div>
 
           <Button gradientDuoTone="purpleToPink" type="submit">
-            Sign Up
+            Sign In
+            {/* TODO: when sign in redirect to DASHBOARD */}
           </Button>
         </form>
         <div className="flex gap-2 text-sm mt-5">
-          <span>Have an account?</span>
-          <Link to="/sign-in" className="text-blue-600">
-            Sign In
+          <span>Don&apos;t Have an account?</span>
+          <Link to="/sign-up" className="text-blue-600">
+            Sign Up
           </Link>
         </div>
       </div>
