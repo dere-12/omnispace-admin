@@ -1,4 +1,4 @@
-import { Alert, Button, Modal, ModalBody, TextInput } from "flowbite-react";
+import { Button, TextInput } from "flowbite-react";
 
 export default function DashProfile() {
   return (
