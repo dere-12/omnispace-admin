@@ -19,7 +19,7 @@ const app = express();
 app.use(express.json()); // this allows json as the input of backend
 
 app.use("/api/user", userRoutes); // test
-app.use("/api/authen", authenRoutes);
+app.use("/api/authen", authenRoutes); // sign up and sign in
 
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
