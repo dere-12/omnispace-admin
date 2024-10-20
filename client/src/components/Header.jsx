@@ -70,7 +70,7 @@ export default function Header() {
         </Navbar.Link>
 
         <Navbar.Link active={path === "/dashboard"} as={"div"}>
-          {currentUser === null ? (
+          {currentUser === null || currentUser.isAdmin === false ? (
             <Link to="/sign-in">Dashboard</Link>
           ) : (
             <Link to="/dashboard">Dashboard</Link>

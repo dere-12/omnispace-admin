@@ -113,8 +113,13 @@ export default function DashProfile() {
           placeholder="Enter your new password"
           onChange={handleChange}
         />
-        <Button type="submit" gradientDuoTone="purpleToBlue" outline>
-          Update
+        <Button
+          type="submit"
+          gradientDuoTone="purpleToBlue"
+          outline
+          disabled={loading}
+        >
+          {loading ? "loading..." : "Update"}
         </Button>
       </form>
       <div className="text-red-500 flex justify-between mt-5 text-sm">
