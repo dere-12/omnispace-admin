@@ -1,5 +1,10 @@
 import { Sidebar } from "flowbite-react";
-import { HiUser, HiArrowSmRight, HiOutlineUserGroup } from "react-icons/hi";
+import {
+  HiUser,
+  HiArrowSmRight,
+  HiOutlineUserGroup,
+  HiDocumentText,
+} from "react-icons/hi";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { signoutSuccess } from "../redux/user/userSlice";
@@ -34,7 +39,7 @@ export default function DashSidebar() {
   };
 
   return (
-    <Sidebar className="w-80 min-h-60">
+    <Sidebar className="w-72 min-h-screen">
       <Sidebar.Items>
         <Sidebar.ItemGroup className="flex flex-col gap-2">
           <Link to="/dashboard?tab=profile">
@@ -46,6 +51,15 @@ export default function DashSidebar() {
               as="div"
             >
               Profile
+            </Sidebar.Item>
+          </Link>
+          <Link to="/dashboard?tab=posts">
+            <Sidebar.Item
+              active={tab === "posts"}
+              icon={HiDocumentText}
+              as="div"
+            >
+              News Post
             </Sidebar.Item>
           </Link>
           <Link to="/dashboard?tab=users">
