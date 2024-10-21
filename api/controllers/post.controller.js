@@ -6,7 +6,7 @@ export const create = async (req, res, next) => {
     console.log("You have to register first to post news");
     return next(errorHandler(403, "You have to register first to post news"));
   }
-  if (!req.body.title || !req.body.content) {
+  if (!req.body.title || !req.body.content || !req.body.publisherName) {
     return next(errorHandler(400, "Please provide all required fields"));
   }
 
